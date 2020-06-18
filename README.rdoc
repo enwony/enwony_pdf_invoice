@@ -1,0 +1,4 @@
+= enwony_pdf_invoice
+
+This plugin allow generate pdf invoice report from selected tasks in issue list view
+
