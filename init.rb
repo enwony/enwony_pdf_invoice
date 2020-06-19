@@ -5,4 +5,5 @@ Redmine::Plugin.register :enwony_pdf_invoice do
   version '0.0.1'
   url 'http://example.com/path/to/plugin'
   author_url 'http://example.com/about'
+  require_dependency 'pdf_invoice_listener'
 end
