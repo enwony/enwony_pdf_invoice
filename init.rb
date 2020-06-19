@@ -1,4 +1,4 @@
-Redmine::Plugin.register :enwony_payed_issues_closing do
+Redmine::Plugin.register :enwony_pdf_invoice do
   name 'Enwony PDF invoice plugin'
   author 'Enwony enwony@gmail.com'
   description 'Allow to generate pdf invoice for seleted issues in issue list view'
