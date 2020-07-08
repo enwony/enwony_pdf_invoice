@@ -1,3 +1,12 @@
 # English strings go here for Rails i18n
 ru:
   generate_invoice: "Сгенерировать счет"
+  invoice_filename: "Проект %{project_name}, завершенные задачи на %{date}"
+  total: "Итого: <b>%{sum}</b> руб (%{hours} часов), оплата на карту сбербанк <b>4276 5000 2432 3535</b> (привязана к телефону) или наличными (сообщите когда и где)"
+  col_id: "№"
+  col_start: "Дата"
+  col_subject: "Задача"
+  col_spent: "Время"
+  col_price: "Цена"
+  col_desc: "Описание и результат"
+  contact: "По всем вопросам обращайтесь: телефон, whatsapp, telegram: <b>+7 902 505 0058</b> (Николай); почта: <b>enwony@gmail.com</b>"
