@@ -11,10 +11,19 @@ prawn_document(filename: @title + ".pdf", page_layout: :landscape, page_size: "A
   pdf.text @title, :size => 14, :style => :bold
   pdf.move_down 10
 
-
   total_spent = @issues.inject(0) {|sum, i| sum + i.spent_hours.to_f }
   total_sum = @issues.inject(0) {|sum, i| sum + i.custom_field_value(5).to_i }
   pdf.text l("total", sum: total_sum, hours: total_spent), :size => 10, :inline_format => true
+  pdf.move_down 8
+
+  pay_visa = "Номер карты: 4276 5000 2432 3535\nТелефон: +7 902 505 0058\nФИО: Николай Викторович М\nСумма: %d" % total_sum;
+  pay_invoice = "Банк: ДАЛЬНЕВОСТОЧНЫЙ БАНК ПАО СБЕРБАНК\nБИК: 040813608\nНомер счета 40817810050001995394\nКорсчет: 30101810600000000608\nИНН ФЛ: 650623394898\nИНН банка: 7707083893\nКПП банка: 254002002\nСумма: %d" % total_sum;
+
+  pdf.table([["Оплата на карту VISA", "Оплата по счету"], [pay_visa, pay_invoice]]) do
+    row(0).font_style = :bold
+    cells.background_color = "F0FFF0"
+    row(0).background_color = "40B040"
+  end
   pdf.move_down 8
 
   pdf.text l("contact"), :size => 8, :inline_format => true
