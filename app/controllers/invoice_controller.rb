@@ -16,6 +16,7 @@ class InvoiceController < ApplicationController
               project_id, count = projects.first
               @project = Project.find(project_id)
               date = Time.now.strftime('%F')
+              @datestr = date
               @title = l("invoice_filename", date: date, project_name: @project.name)
             end
         end
